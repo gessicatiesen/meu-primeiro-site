@@ -1,11 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galeria Infantil - 50 Atividades para Crianças</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 15px 10px 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item .overlay span {
+            display: block;
+            font-size: 0.9em;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        .stats {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-  eu não sei oque estou fazendo  
+    <div class="header">
+        <h1>🎨 Galeria de Atividades Infantis 🎈</h1>
+        <p>50 imagens divertidas para estimular a criatividade das crianças</p>
+        <div class="stats">
+            <span>📸 50 atividades | 🎯 Clique para ampliar</span>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <!-- 50 imagens de atividades infantis -->
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/542556/pexels-photo-542556.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança pintando" loading="lazy">
+            <div class="overlay"><span>🎨 Pintura</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/861294/pexels-photo-861294.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança lendo" loading="lazy">
+            <div class="overlay"><span>📚 Leitura</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança brincando com blocos" loading="lazy">
+            <div class="overlay"><span>🧱 Blocos</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933022/pexels-photo-3933022.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança desenhando" loading="lazy">
+            <div class="overlay"><span>✏️ Desenho</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/296301/pexels-photo-296301.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha" loading="lazy">
+            <div class="overlay"><span>🎭 Massinha</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/847403/pexels-photo-847403.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com quebra-cabeça" loading="lazy">
+            <div class="overlay"><span>🧩 Quebra-cabeça</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/159539/child-playing-boy-preschool-159539.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com brinquedos" loading="lazy">
+            <div class="overlay"><span>🚂 Brinquedos</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/208518/pexels-photo-208518.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com bola" loading="lazy">
+            <div class="overlay"><span>⚽ Esportes</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088007/pexels-photo-5088007.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com instrumento musical" loading="lazy">
+            <div class="overlay"><span>🎵 Música</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088186/pexels-photo-5088186.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança dançando" loading="lazy">
+            <div class="overlay"><span>💃 Dança</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3771078/pexels-photo-3771078.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com fantoche" loading="lazy">
+            <div class="overlay"><span>🧦 Fantoches</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/54338/pexels-photo-54338.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com livros" loading="lazy">
+            <div class="overlay"><span>📖 Histórias</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha modelando" loading="lazy">
+            <div class="overlay"><span>🎨 Artesanato</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/861307/pexels-photo-861307.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com tablet" loading="lazy">
+            <div class="overlay"><span>📱 Educativo</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/54339/pexels-photo-54339.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com brinquedo educativo" loading="lazy">
+            <div class="overlay"><span>🧮 Matemática</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Crianças na escola" loading="lazy">
+            <div class="overlay"><span>🏫 Escola</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3769981/pexels-photo-3769981.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com tinta" loading="lazy">
+            <div class="overlay"><span>🖌️ Pintura a dedo</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha colorida" loading="lazy">
+            <div class="overlay"><span>🌈 Cores</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933042/pexels-photo-3933042.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com papel colorido" loading="lazy">
+            <div class="overlay"><span>📄 Dobradura</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933252/pexels-photo-3933252.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com colagem" loading="lazy">
+            <div class="overlay"><span>✂️ Colagem</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/4353614/pexels-photo-4353614.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha de modelar" loading="lazy">
+            <div class="overlay"><span>🎨 Modelagem</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088178/pexels-photo-5088178.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com tinta guache" loading="lazy">
+            <div class="overlay"><span>🖼️ Pintura</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/542557/pexels-photo-542557.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança estudando" loading="lazy">
+            <div class="overlay"><span>📝 Estudo</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088013/pexels-photo-5088013.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com jogos educativos" loading="lazy">
+            <div class="overlay"><span>🎲 Jogos</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933240/pexels-photo-3933240.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com lápis de cor" loading="lazy">
+            <div class="overlay"><span>🖍️ Colorir</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3768892/pexels-photo-3768892.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com brinquedo de montar" loading="lazy">
+            <div class="overlay"><span>🏗️ Construção</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088008/pexels-photo-5088008.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha caseira" loading="lazy">
+            <div class="overlay"><span>👩‍🍳 Culinária</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933249/pexels-photo-3933249.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com tinta colorida" loading="lazy">
+            <div class="overlay"><span>🎨 Artes</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3769980/pexels-photo-3769980.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com brinquedo educativo" loading="lazy">
+            <div class="overlay"><span>🧩 Raciocínio</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/847432/pexels-photo-847432.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com livro" loading="lazy">
+            <div class="overlay"><span>📚 Leitura</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088017/pexels-photo-5088017.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com instrumento musical" loading="lazy">
+            <div class="overlay"><span>🥁 Música</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/54340/pexels-photo-54340.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com brinquedo" loading="lazy">
+            <div class="overlay"><span>🧸 Brincar</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3768895/pexels-photo-3768895.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha" loading="lazy">
+            <div class="overlay"><span>🔴 Formas</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088182/pexels-photo-5088182.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com tinta" loading="lazy">
+            <div class="overlay"><span>🌈 Pintura</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933025/pexels-photo-3933025.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com papel" loading="lazy">
+            <div class="overlay"><span>📃 Artesanato</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088006/pexels-photo-5088006.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha" loading="lazy">
+            <div class="overlay"><span>🎨 Criatividade</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3771068/pexels-photo-3771068.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com lápis" loading="lazy">
+            <div class="overlay"><span>✏️ Desenho</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933055/pexels-photo-3933055.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com tinta guache" loading="lazy">
+            <div class="overlay"><span>🎭 Expressão</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088180/pexels-photo-5088180.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com brinquedo" loading="lazy">
+            <div class="overlay"><span>🤹‍♂️ Diversão</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933041/pexels-photo-3933041.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com colagem" loading="lazy">
+            <div class="overlay"><span>🌟 Imaginação</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha" loading="lazy">
+            <div class="overlay"><span>🎯 Coordenação</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088003/pexels-photo-5088003.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com instrumento" loading="lazy">
+            <div class="overlay"><span>🎶 Música</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933026/pexels-photo-3933026.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com tinta" loading="lazy">
+            <div class="overlay"><span>🖼️ Arte</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088005/pexels-photo-5088005.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com brinquedo educativo" loading="lazy">
+            <div class="overlay"><span>🎓 Aprendizado</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933060/pexels-photo-3933060.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com papel colorido" loading="lazy">
+            <div class="overlay"><span>🌈 Criatividade</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088191/pexels-photo-5088191.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com massinha" loading="lazy">
+            <div class="overlay"><span>👐 Sensorial</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933255/pexels-photo-3933255.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com lápis de cor" loading="lazy">
+            <div class="overlay"><span>🖍️ Colorindo</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5088012/pexels-photo-5088012.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com brinquedo" loading="lazy">
+            <div class="overlay"><span>🎪 Imaginação</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/3933033/pexels-photo-3933033.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Criança com tinta" loading="lazy">
+            <div class="overlay"><span>🎨 Expressão</span></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>🌟 50 atividades divertidas para crianças explorarem e aprenderem 🌟</p>
+        <p style="font-size: 0.9em; margin-top: 10px;">Clique em qualquer imagem para ver mais detalhes (você pode adicionar funcionalidade de lightbox depois)</p>
+    </div>
+
+    <script>
+        // Script simples para adicionar interatividade básica
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const atividade = this.querySelector('.overlay span').textContent;
+                alert(`Atividade selecionada: ${atividade}\nEm breve: visualização ampliada!`);
+            });
+        });
+    </script>
 </body>
 </html>
